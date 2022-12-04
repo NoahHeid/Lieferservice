@@ -18,16 +18,16 @@ public class DeliveryController {
         List<Delivery> lieferungen = deliveryService.getAllDeliveries();
         return new ResponseEntity(lieferungen, HttpStatus.OK);
     }
-    @PostMapping("/deliveries")
+    @PostMapping("/delivery")
     public ResponseEntity saveDelivery(@RequestBody Delivery delivery){
         deliveryService.save(delivery);
         return new ResponseEntity(HttpStatus.CREATED);
     }
-    @DeleteMapping("/deliveries")
+    @DeleteMapping("/delivery")
     public ResponseEntity deleteDelivery(@RequestParam Long id){
         return deliveryService.deleteDeliveryById(id);
     }
-    @PutMapping("/deliveries")
+    @PutMapping("/delivery")
     public ResponseEntity updateDelivery(@RequestParam Long id, @RequestBody Delivery delivery){
         return deliveryService.updateDeliveryById(id, delivery);
 
