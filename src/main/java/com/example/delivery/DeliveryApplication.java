@@ -1,13 +1,13 @@
-package com.example.lieferservice;
+package com.example.delivery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LieferserviceApplication {
+public class DeliveryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LieferserviceApplication.class, args);
+        SpringApplication.run(DeliveryApplication.class, args);
     }
 
 }

@@ -1,17 +1,16 @@
-package com.example.lieferservice;
+package com.example.delivery;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
-@Table(name="lieferung")
-public class Lieferung {
+@Table(name="delivery")
+public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "liefername")
+    @Column(name = "delivery")
     private String name;
 
     public Long getId() {
