@@ -8,3 +8,8 @@ spring:
     url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+
+springdoc:
+  show-actuator: true
+  api-docs:
+    path: /api
