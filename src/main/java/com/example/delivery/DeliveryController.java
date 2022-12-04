@@ -18,6 +18,17 @@ public class DeliveryController {
         List<Delivery> lieferungen = deliveryService.getAllDeliveries();
         return new ResponseEntity(lieferungen, HttpStatus.OK);
     }
+    @GetMapping("/delivery")
+    public ResponseEntity getSpecificDelivery(@RequestParam String name){
+        Delivery delivery = deliveryService.getSpecificDelivery(name);
+        return new ResponseEntity(delivery, HttpStatus.OK);
+    }
+
+    @GetMapping("/deliveries-by-price")
+    public ResponseEntity<List> getSpecificDeliveryByPrice(@RequestParam Double price){
+        List<Delivery> deliveries = deliveryService.getSpecificDeliveryByPrice(price);
+        return new ResponseEntity(deliveries, HttpStatus.OK);
+    }
     @PostMapping("/delivery")
     public ResponseEntity saveDelivery(@RequestBody Delivery delivery){
         deliveryService.save(delivery);

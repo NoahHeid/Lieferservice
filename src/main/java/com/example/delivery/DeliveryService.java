@@ -41,4 +41,14 @@ public class DeliveryService {
         }
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
+
+    public Delivery getSpecificDelivery(String name) {
+        Delivery delivery = deliveryRepository.findByName(name);
+        return delivery;
+    }
+
+    public List<Delivery> getSpecificDeliveryByPrice(Double price) {
+        List<Delivery> deliveries = deliveryRepository.findByPrice(price);
+        return deliveries;
+    }
 }
