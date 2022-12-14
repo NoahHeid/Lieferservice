@@ -1,5 +1,6 @@
 package com.example.delivery;
 
+import com.example.delivery.entities.Delivery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,8 +32,7 @@ public class DeliveryController {
     }
     @PostMapping("/delivery")
     public ResponseEntity saveDelivery(@RequestBody Delivery delivery){
-        deliveryService.save(delivery);
-        return new ResponseEntity(HttpStatus.CREATED);
+        return deliveryService.save(delivery);
     }
     @DeleteMapping("/delivery")
     public ResponseEntity deleteDelivery(@RequestParam Long id){
