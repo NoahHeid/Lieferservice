@@ -32,3 +32,4 @@ build/
 .vscode/
 /src/test/resources/test.properties
 
+/docker-compose.yaml
