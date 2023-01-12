@@ -42,7 +42,7 @@ public class DeliveryService {
     }
 
     private static ResponseEntity sendRequest(List<Integer> ids) {
-        String url = "http://localhost:8081/get-price-of-elements";
+        String url = "http://productservice:8081/get-price-of-elements";
         HttpHeaders headers = new HttpHeaders();
         headers.set("Content-Type", "application/json");
         HttpEntity entity = new HttpEntity(ids, headers);
